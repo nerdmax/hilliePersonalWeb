@@ -1,0 +1,113 @@
+/*
+Theme Name: ROUA - Creative Portfolio WordPress Theme
+Theme URI: http://demo.stylishthemes.co/roua/
+Author: StylishThemes
+Author URI: http://stylishthemes.co
+Description: Roua is a theme for clean & creative portfolio websites.
+Version: 3.5.2
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: diva
+Tags: black, blue, white, two-columns, responsive-layout, threaded-comments, translation-ready, custom-menu
+*/
+
+.pagination-roua {
+    padding-bottom: 45px;
+}
+
+.portfolio-single .header-portfolio-single .like span {
+    text-align: center;
+}
+
+.zilla-likes-postfix {
+    margin: 0 !important;
+}
+
+section.no-mb .breadcrumb {
+    margin-bottom: 0px;
+}
+
+.owl-carousel .owl-item img {
+    height: auto;
+}
+
+.wp-caption, .wp-caption-text, .gallery-caption, .bypostauthor, .aligncenter {}
+
+/*.isotope-item figure {*/
+    /*min-height: 450px;*/
+/*}*/
+
+.comment-container ul.comments li .comment .left-section img {
+    height:auto;
+}
+
+.content-portfolio-single > p {
+    /*display: inline;*/
+}
+
+
+/*** Steph Overwrites Begin ***/
+header.header .additional-right-buttons, .roua-menu .additional-right-buttons {
+  display: none;
+}
+
+html.menu-is-open .roua-menu .social-icons {
+  display: none;
+}
+
+.social-icons {
+   display: none;
+}
+
+header.header.half-light-layout a.open-menu, .roua-menu.half-light-layout a.open-menu {
+   float: right;
+   /* display: none !important; */
+}
+
+
+/*** Steph Overwrites End***/
+
+
+@media (max-width: 780px) {
+    .video-bg > iframe {
+        display: none !important;
+    }
+}
+
+#main-content img { height:auto; }
+
+.pagination-roua .middle .icon span { background: #dadada; }
+
+.woocommerce > p.cart-empty { min-height: 300px; }
+
+.roua-menu .menu ul li ul {
+    position: relative;
+    padding-left: 40px;
+}
+.roua-menu .menu ul li ul:after {
+    content: '';
+    width: 1px;
+    background: #c9c9c9;
+    height: 100%;
+    top: -5px;
+    position: absolute;
+    display: block;
+    left: 20px;
+}
+.roua-menu .menu ul li ul li a {
+    font-size: 21px;
+    line-height: 30px;
+    padding-bottom: 10px;
+}
+.roua-menu .menu ul li ul li a:after {
+    height: 2px;
+}
+.roua-menu .menu ul li ul li a:hover:after {
+    bottom: 10px;
+}
+
+@media (max-width: 780px) {
+    .roua-menu .menu ul li ul:after {
+        display: none;
+    }
+}

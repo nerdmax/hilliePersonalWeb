@@ -1,0 +1,35 @@
+<wpml-config>
+    <admin-texts>
+        <key name="clx_data">
+            <key name="logo-big-dark">
+                <key name="url" />
+            </key>
+            <key name="logo-small-dark">
+                <key name="url" />
+            </key>
+            <key name="logo-big-light">
+                <key name="url" />
+            </key>
+            <key name="logo-small-light">
+                <key name="url" />
+            </key>
+            <key name="csscode" />
+            <key name="menu-color-scheme" />
+            <key name="menu-image">
+                <key name="url" />
+            </key>
+            <key name="copyright" />
+            <key name="contact-email" />
+            <key name="contact-title" />
+            <key name="contact-description" />
+            <key name="map-image">
+                <key name="url" />
+            </key>
+            <key name="social">
+                <key name="0" />
+                <key name="1" />
+                <key name="2" />
+            </key>
+        </key>
+    </admin-texts>
+</wpml-config>

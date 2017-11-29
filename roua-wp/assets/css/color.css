@@ -1,0 +1,326 @@
+a {
+  color: #2be6f2;
+}
+a:hover,
+a:focus {
+  color: #2be6f2;
+}
+blockquote:before {
+  color: #2be6f2;
+}
+.roua-menu .menu ul li a:after {
+  background: #2be6f2;
+}
+.shopping-cart span {
+  background: #2be6f2;
+}
+.filter-list nav ul li a:after {
+  background: #2be6f2;
+}
+.portfolio-single .footer-portfolio-single .category a:hover {
+  color: #2be6f2;
+}
+.carousel-description .text .content p {
+  border-bottom: 3px solid #2be6f2;
+}
+.team-member .content .social-icons ul li:hover a {
+  color: #2be6f2;
+}
+@media (max-width: 780px) {
+  .filter-list nav ul li a:after {
+    background: #2be6f2;
+  }
+}
+.owl-team .owl-controls .owl-nav div:hover {
+  color: #2be6f2;
+}
+.text-primary {
+  color: #1f2021;
+}
+.bg-primary {
+  background-color: #1f2021;
+}
+.form-control:hover,
+input[type=text]:hover,
+textarea:hover,
+.post-password-form input[type=password]:hover,
+.cart-collaterals .input-text:hover,
+.create-account .input-text:hover,
+.login .input-text:hover,
+.form-control:active,
+input[type=text]:active,
+textarea:active,
+.post-password-form input[type=password]:active,
+.cart-collaterals .input-text:active,
+.create-account .input-text:active,
+.login .input-text:active,
+.form-control:focus,
+input[type=text]:focus,
+textarea:focus,
+.post-password-form input[type=password]:focus,
+.cart-collaterals .input-text:focus,
+.create-account .input-text:focus,
+.login .input-text:focus {
+  border-color: #1f2021;
+}
+.btn:hover,
+input[type=submit]:hover,
+button[type=submit]:hover,
+.btn:focus,
+input[type=submit]:focus,
+button[type=submit]:focus {
+  border-color: #1f2021;
+}
+.btn:hover:after,
+input[type=submit]:hover:after,
+button[type=submit]:hover:after,
+.btn:focus:after,
+input[type=submit]:focus:after,
+button[type=submit]:focus:after {
+  background: #1f2021;
+}
+.breadcrumb {
+  background-color: #1f2021;
+}
+.breadcrumb.breadcrumb-fullscreen {
+  color: #1f2021;
+}
+.breadcrumb > div h1 {
+  color: #1f2021;
+}
+.breadcrumb .info a:before {
+  color: #1f2021;
+}
+.alert a {
+  color: #1f2021;
+}
+header.header.no-breadcrumb-fullscreen {
+  background: #1f2021;
+}
+header.header.dark-bg.affix {
+  background-color: #1f2021;
+}
+header.header.dark-layout .additional-right-buttons a,
+.roua-menu.dark-layout .additional-right-buttons a {
+  color: #1f2021;
+}
+header.header.dark-layout a.open-menu,
+.roua-menu.dark-layout a.open-menu {
+  color: #1f2021;
+}
+header.header.dark-layout a.open-menu .icon span,
+.roua-menu.dark-layout a.open-menu .icon span {
+  background: #1f2021;
+}
+header.header.dark-layout nav.social-icons ul li a,
+.roua-menu.dark-layout nav.social-icons ul li a {
+  color: #1f2021;
+}
+header.header.half-light-layout .additional-right-buttons a,
+.roua-menu.half-light-layout .additional-right-buttons a {
+  color: #1f2021;
+}
+header.header.half-light-layout a.open-menu,
+.roua-menu.half-light-layout a.open-menu {
+  color: #1f2021;
+}
+header.header.half-light-layout a.open-menu .icon span,
+.roua-menu.half-light-layout a.open-menu .icon span {
+  background: #1f2021;
+}
+header.header.half-light-layout nav.social-icons ul li a,
+.roua-menu.half-light-layout nav.social-icons ul li a {
+  color: #1f2021;
+}
+header.header.half-light-layout nav.social-icons ul li a:hover,
+.roua-menu.half-light-layout nav.social-icons ul li a:hover {
+  background: #1f2021;
+}
+header.header.transparent-layout.dark-layout nav.social-icons ul li a,
+.roua-menu.transparent-layout.dark-layout nav.social-icons ul li a {
+  color: #1f2021;
+}
+header.header.transparent-layout.dark-layout nav.social-icons ul li a:hover,
+.roua-menu.transparent-layout.dark-layout nav.social-icons ul li a:hover {
+  color: #1f2021;
+}
+header.header.dark-layout nav.social-icons ul li a {
+  color: #1f2021;
+}
+@media (max-width: 500px) {
+  header.header.phone-menu-bg.transparent-layout.affix,
+  header.header.phone-menu-bg.light-layout.affix {
+    background-color: #1f2021;
+  }
+}
+.roua-menu .menu ul li a {
+  color: #1f2021;
+}
+nav.social-icons ul li a:hover {
+  color: #1f2021;
+}
+.filter-list nav .x-filter span {
+  background: #1f2021;
+}
+.filter-list nav ul li a {
+  color: #1f2021;
+}
+.portfolio ul li figure .content .left,
+.shop-products ul li figure .content .left {
+  border-right: 1px solid #1f2021;
+}
+.portfolio ul li figure .content .left i,
+.shop-products ul li figure .content .left i {
+  color: #1f2021;
+}
+.shop-products ul li figure .content .left i {
+  color: #1f2021;
+}
+.shop-products ul li figure .content .right .price {
+  color: #1f2021;
+}
+.shop-single .header-shop-single h2 a {
+  color: #1f2021;
+}
+.shop-single .header-shop-single .price {
+  color: #1f2021;
+}
+.shop-single .content-shop-single .chose-color .colors label {
+  background: #1f2021;
+}
+.shop-single .footer-shop-single .woocommerce-tabs .nav li:hover a,
+.shop-single .footer-shop-single .woocommerce-tabs .nav li.active a {
+  background: #1f2021;
+}
+.shop-single .footer-shop-single .woocommerce-tabs .commentlist li p.meta strong {
+  color: #1f2021;
+}
+.shop-single .footer-shop-single .woocommerce-tabs .comment-form span a {
+  color: #1f2021 !important;
+}
+.woocommerce .shop_table.cart > tbody > tr > td.product-price span,
+.woocommerce .shop_table.cart > tbody > tr > td.product-subtotal span {
+  color: #1f2021;
+}
+.cart_totals table > tbody > tr > td,
+.shop_table table > tbody > tr > td,
+.cart_totals table > tbody > tr > td span,
+.shop_table table > tbody > tr > td span {
+  color: #1f2021;
+}
+.shop_table strong {
+  color: #1f2021;
+}
+.cart .quantity {
+  border: 2px solid #1f2021;
+}
+.cart .quantity label {
+  color: #1f2021;
+}
+.cart .quantity label:hover {
+  background: #1f2021;
+}
+.checkout label {
+  color: #1f2021;
+}
+.checkout input[type=checkbox] + label span {
+  border: 2px solid #1f2021;
+}
+.checkout input[type=checkbox] + label span:before {
+  color: #1f2021;
+}
+.checkout input[type=radio] + label span {
+  border: 2px solid #1f2021;
+}
+.checkout input[type=radio] + label span:before {
+  color: #1f2021;
+}
+.login .btn:hover,
+.lost_reset_password .btn:hover,
+.checkout_coupon .btn:hover {
+  color: #1f2021;
+}
+.login a,
+.lost_reset_password a,
+.checkout_coupon a {
+  color: #1f2021;
+}
+.portfolio-single .header-portfolio-single .like i {
+  color: #1f2021;
+}
+.portfolio-single .footer-portfolio-single .navigation-projects > a {
+  color: #1f2021;
+}
+.portfolio-single .footer-portfolio-single .navigation-projects > a:hover .icon {
+  background: #1f2021;
+}
+.padding-content h5 a {
+  color: #1f2021;
+  border-bottom: 1px solid #1f2021;
+}
+.comment-respond .form-submit:after {
+  background: #1f2021;
+}
+@media (max-width: 780px) {
+  .filter-list nav .x-filter span {
+    background: #1f2021;
+  }
+}
+.blog-posts > article section footer a {
+  color: #1f2021;
+}
+.post-password-form input[type=submit]:hover {
+  color: #1f2021;
+}
+#nprogress .bar {
+  background: #1f2021;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #1f2021, 0 0 5px #1f2021;
+}
+#nprogress .spinner-icon {
+  border-top-color: #1f2021;
+  border-left-color: #1f2021;
+}
+.chosen-container-single .chosen-single:hover {
+  border: 2px solid #1f2021;
+}
+
+.out-services-box .title-for-services {
+  text-align: center;
+  background: #1f2021;
+}
+
+.out-services-box .service-box:hover {
+  background: #2be6f2;
+}
+
+.out-services-box .service-box .icon-service {
+  display: inline-block;
+  width: 17rem;
+  height: 17rem;
+  line-height: 20rem;
+  border-radius: 50%;
+  border: 3px solid #1f2021;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.out-services-box .service-box .icon-service i {
+  font-size: 7.4rem;
+  color: #1f2021;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
