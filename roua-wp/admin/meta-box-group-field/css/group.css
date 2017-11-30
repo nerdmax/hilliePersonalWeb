@@ -1,0 +1,24 @@
+.rwmb-group-wrapper .rwmb-input .rwmb-clone {
+	border: 1px dashed #cccccc;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+
+.rwmb-group-wrapper .rwmb-button.remove-clone {
+	top: 10px;
+	right: 10px;
+}
+
+.rwmb-group-wrapper .wp-picker-container {
+	height: 25px;
+	line-height: 34px;
+}
+
+.rwmb-group-wrapper iframe {
+	max-width: 100%;
+}
+
+.rwmb-sub-group-wrapper {
+	line-height: 27px;
+	margin-bottom: 5px;
+}
