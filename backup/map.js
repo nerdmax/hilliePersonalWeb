@@ -1,199 +1,189 @@
-(function ( $ )
-{
-	'use strict';
+<!-- ================================================== -->
 
-	// Use function construction to store map & DOM elements separately for each instance
-	var MapField = function ( $container )
-	{
-		this.$container = $container;
-	};
+<!-- =============== START GOOGLE MAP SETTINGS ================ -->
 
-	// Use prototype for better performance
-	MapField.prototype = {
-		// Initialize everything
-		init              : function ()
-		{
-			this.initDomElements();
-			this.initMapElements();
+<!-- ================================================== -->
 
-			this.initMarkerPosition();
-			this.addListeners();
-			this.autocomplete();
-		},
 
-		// Initialize DOM elements
-		initDomElements   : function ()
-		{
-			this.canvas = this.$container.find( '.rwmb-map-canvas' )[0];
-			this.$coordinate = this.$container.find( '.rwmb-map-coordinate' );
-			this.$findButton = this.$container.find( '.rwmb-map-goto-address-button' );
-			this.addressField = this.$findButton.val();
-		},
 
-		// Initialize map elements
-		initMapElements   : function ()
-		{
-			var defaultLoc = $( this.canvas ).data( 'default-loc' ),
-				latLng;
+jQuery(document).ready(function(){
 
-			defaultLoc = defaultLoc ? defaultLoc.split( ',' ) : [53.346881, -6.258860];
-			latLng = new google.maps.LatLng( defaultLoc[0], defaultLoc[1] ); // Initial position for map
-			snazzyMap = [{"featureType":"all","elementType":"geometry.fill","stylers":[{"weight":"2.00"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"color":"#9c9c9c"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#7b7b7b"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#c8d7d4"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#070707"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]}];
 
-			this.map = new google.maps.Map( this.canvas, {
-				center           : latLng,
-				zoom             : 14,
-				streetViewControl: 0,
-				mapTypeId        : google.maps.MapTypeId.ROADMAP,
-				styles : snazzyMap
-			} );
-			this.marker = new google.maps.Marker( { position: latLng, map: this.map, draggable: true } );
-			this.geocoder = new google.maps.Geocoder();
-		},
 
-		// Initialize marker position
-		initMarkerPosition: function ()
-		{
-			var coord = this.$coordinate.val(),
-				l,
-				zoom;
+  var map;
 
-			if ( coord )
-			{
-				l = coord.split( ',' );
-				this.marker.setPosition( new google.maps.LatLng( l[0], l[1] ) );
+  var lat = jQuery('#map-canvas').data('lat');
 
-				zoom = l.length > 2 ? parseInt( l[2], 10 ) : 14;
+  var long = jQuery('#map-canvas').data('long');
 
-				this.map.setCenter( this.marker.position );
-				this.map.setZoom( zoom );
-			}
-			else if ( this.addressField )
-			{
-				this.geocodeAddress();
-			}
-		},
+  var myLatLng = new google.maps.LatLng(lat,long);
 
-		// Add event listeners for 'click' & 'drag'
-		addListeners      : function ()
-		{
-			var that = this;
-			google.maps.event.addListener( this.map, 'click', function ( event )
-			{
-				that.marker.setPosition( event.latLng );
-				that.updateCoordinate( event.latLng );
-			} );
-			google.maps.event.addListener( this.marker, 'drag', function ( event )
-			{
-				that.updateCoordinate( event.latLng );
-			} );
+  var title = jQuery('#map-canvas').data('title')
 
-			this.$findButton.on( 'click', function ()
-			{
-				that.geocodeAddress();
-				return false;
-			} );
-		},
+  var description = jQuery('#map-canvas').data('description')
 
-		// Autocomplete address
-		autocomplete      : function ()
-		{
-			var that = this;
 
-			// No address field or more than 1 address fields, ignore
-			if ( !this.addressField || this.addressField.split( ',' ).length > 1 )
-			{
-				return;
-			}
 
-			$( '#' + this.addressField ).autocomplete( {
-				source: function ( request, response )
-				{
-					// TODO: add 'region' option, to help bias geocoder.
-					that.geocoder.geocode( {
-						'address': request.term
-					}, function ( results )
-					{
-						response( $.map( results, function ( item )
-						{
-							return {
-								label    : item.formatted_address,
-								value    : item.formatted_address,
-								latitude : item.geometry.location.lat(),
-								longitude: item.geometry.location.lng()
-							};
-						} ) );
-					} );
-				},
-				select: function ( event, ui )
-				{
-					var latLng = new google.maps.LatLng( ui.item.latitude, ui.item.longitude );
+  function initialize() {
 
-					that.map.setCenter( latLng );
-					that.marker.setPosition( latLng );
-					that.updateCoordinate( latLng );
-				}
-			} );
-		},
 
-		// Update coordinate to input field
-		updateCoordinate  : function ( latLng )
-		{
-			this.$coordinate.val( latLng.lat() + ',' + latLng.lng() );
-		},
 
-		// Find coordinates by address
-		// Find coordinates by address
-		geocodeAddress    : function ()
-		{
-			var address,
-				addressList = [],
-				fieldList = this.addressField.split( ',' ),
-				loop,
-				that = this;
+    var roadAtlasStyles = [
 
-			for ( loop = 0; loop < fieldList.length; loop++ )
-			{
-				addressList[loop] = jQuery( '#' + fieldList[loop] ).val();
-			}
+      {
 
-			address = addressList.join( ',' ).replace( /\n/g, ',' ).replace( /,,/g, ',' );
+        stylers: [
 
-			if ( address )
-			{
-				this.geocoder.geocode( { 'address': address }, function ( results, status )
-				{
-					if ( status === google.maps.GeocoderStatus.OK )
-					{
-						that.map.setCenter( results[0].geometry.location );
-						that.marker.setPosition( results[0].geometry.location );
-						that.updateCoordinate( results[0].geometry.location );
-					}
-				} );
-			}
-		}
-	};
+          { hue: "#00ffe6" },
 
-	$( function ()
-	{
-		$( '.rwmb-map-field' ).each( function ()
-		{
-			var field = new MapField( $( this ) );
-			field.init();
+          { saturation: -20 }
 
-			$( this ).data( 'mapController', field );
-		} );
+        ]
 
-		$( '.rwmb-input' ).on( 'clone', function ()
-		{
-			$( '.rwmb-map-field' ).each( function ()
-			{
-				var field = new MapField( $( this ) );
-				field.init();
+      },{
 
-				$( this ).data( 'mapController', field );
-			} );
-		} );
-	} );
+        featureType: "road",
 
-})( jQuery );
+        elementType: "geometry",
+
+        stylers: [
+
+          { lightness: 100 },
+
+          { visibility: "simplified" }
+
+        ]
+
+      },{
+
+        featureType: "road",
+
+        elementType: "labels",
+
+        stylers: [
+
+          { visibility: "off" }
+
+        ]
+
+      }
+
+    ];
+
+
+
+    var mapOptions = {
+
+        zoom: 13,
+
+      center: myLatLng,
+
+  	disableDefaultUI: true,
+
+  	scrollwheel: false,
+
+      navigationControl: false,
+
+      mapTypeControl: false,
+
+      scaleControl: false,
+
+      draggable: false,
+
+      mapTypeControlOptions: {
+
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas']
+
+      }
+
+    };
+
+
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+
+
+    var img = jQuery('#map-canvas').data('img');
+
+     
+
+    var marker = new google.maps.Marker({
+
+        position: myLatLng,
+
+        map: map,
+
+        icon: img,
+
+  	  title: ''
+
+    });
+
+    
+
+    var contentString = '<div style="max-width: 300px" id="content">'+
+
+        '<div id="bodyContent">'+
+
+  	  '<h5 class="color-primary"><strong>'+ title +'</strong></h5>' +
+
+        '<p style="font-size: 12px">' + description + '</p>'+
+
+        '</div>'+
+
+        '</div>';
+
+
+
+    var infowindow = new google.maps.InfoWindow({
+
+        content: contentString
+
+    });
+
+    
+
+    google.maps.event.addListener(marker, 'click', function() {
+
+      infowindow.open(map,marker);
+
+    });
+
+
+
+    var styledMapOptions = {
+
+      name: 'US Road Atlas'
+
+    };
+
+
+
+    var usRoadMapType = new google.maps.StyledMapType(
+
+        roadAtlasStyles, styledMapOptions);
+
+
+
+    map.mapTypes.set('usroadatlas', usRoadMapType);
+
+    map.setMapTypeId('usroadatlas');
+
+  }
+
+
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+    
+
+});
+
+
+
+<!-- ================================================== -->
+
+<!-- =============== END GOOGLE MAP SETTINGS ================ -->
+
+<!-- ================================================== -->
