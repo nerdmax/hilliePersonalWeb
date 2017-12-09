@@ -16,7 +16,8 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
-lib/
+roua-wp/lib/functions/
+roua-wp/lib/plugins/
 lang/
 woocommerce/
 roua-wp/assets/bootstrap-master/
