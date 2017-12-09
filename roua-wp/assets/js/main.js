@@ -918,7 +918,7 @@ jQuery(function(){
 
 
 
-    fullScreenBreadcrumb();
+    // fullScreenBreadcrumb();
 
 
 
@@ -926,7 +926,7 @@ jQuery(function(){
 
 
 
-        fullScreenBreadcrumb();
+        // fullScreenBreadcrumb();
 
 
 
