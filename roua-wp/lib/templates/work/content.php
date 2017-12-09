@@ -98,7 +98,7 @@ $images = rwmb_meta("{$prefix}imgadv", array('type'=>'image_advanced', 'size'=>'
                                     </ul>
                                 </nav>-->
 
-                                <?php roua_post_single_nav(get_the_ID(), PortfolioPostType::get_instance()->postType); ?>
+                                <!-- <?php roua_post_single_nav(get_the_ID(), PortfolioPostType::get_instance()->postType); ?> -->
 
                             </div>
                         </div>
