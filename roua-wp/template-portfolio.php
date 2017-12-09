@@ -92,7 +92,6 @@ get_header(); ?>
                                         <?php endif; ?>
 
                                         <div class="content">
-
                                             <div class="left">
                                                 <?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
                                             </div>
@@ -109,8 +108,9 @@ get_header(); ?>
                                                         <?php echo $work; ?>
                                                     </a>
                                                 </div>
-
+                                                
                                             </div>
+                                            <a href="<?php the_permalink(); ?>"></a>
                                         </div>
                                     </figure>
                                 </li>
