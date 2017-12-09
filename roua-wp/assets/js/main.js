@@ -986,15 +986,15 @@ jQuery(function(){
 
 
 
-        jQuery('.portfolio-single').affix({
+        // jQuery('.portfolio-single').affix({
 
-            offset: {
+        //     offset: {
 
-              top: breadcrumbHH - 75
+        //       top: breadcrumbHH - 75
 
-            }
+        //     }
 
-        });
+        // });
 
 
 
@@ -1040,11 +1040,25 @@ jQuery(function(){
 
 
 
+          // jQuery('.content-portfolio-single').css({
+
+
+
+          //   'max-height' : finalPortfolioSingleContentH ,
+
+
+
+          //   'padding' : '0' ,
+
+
+
+          //   'margin' : '40px 0'
+
+
+
+          // });
+
           jQuery('.content-portfolio-single').css({
-
-
-
-            'max-height' : finalPortfolioSingleContentH ,
 
 
 
