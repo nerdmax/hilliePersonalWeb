@@ -129,7 +129,7 @@ function clubix_load_custom_scripts() {
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrapJS', THEMEROOT . '/assets/js/bootstrap.min.js', array(), '1.0', true);
     wp_enqueue_script('onePluginsJS', THEMEROOT . '/assets/js/plugins.js', array(), '1.0', true);
-    wp_enqueue_script('oneMainJS', THEMEROOT . '/assets/js/main.js', array(), '1.0', true);
+    wp_enqueue_script('oneMainJS', THEMEROOT . '/assets/js/main.js', array(), '1.1', true);
 
     if(is_page() && 'template-contact.php' === get_page_template_slug( get_the_ID() )) {
 
