@@ -472,7 +472,7 @@ if($header_color) {
 
 						</span>
 
-                    <?php _e('menu', LANGUAGE_ZONE); ?>
+                    <!-- <?php _e('menu', LANGUAGE_ZONE); ?> -->
 
                 </a>
 
