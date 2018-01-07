@@ -477,8 +477,8 @@ if($header_color) {
                 </a>
 
                 <ul class="list-inline pull-right desktop-nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/contact/">CONTACT</a></li>
                 </ul>
 
 
