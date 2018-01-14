@@ -9861,26 +9861,28 @@ nav.social-icons ul li a:hover {
   font-family: 'Merriweather';
   font-weight: 300;
 }
-.portfolio ul li:hover figure .content,
-.products .product:hover .content {
-  opacity: 1;
-  visibility: visible;
-}
-.portfolio ul li:hover figure .content .left,
-.products .product:hover .content .left {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -o-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-.portfolio ul li:hover figure .content .right,
-.products .product:hover .content .right {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -o-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+@media (pointer: fine) {
+  .portfolio ul li:hover figure .content,
+  .products .product:hover .content {
+    opacity: 1;
+    visibility: visible;
+  }
+  .portfolio ul li:hover figure .content .left,
+  .products .product:hover .content .left {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .portfolio ul li:hover figure .content .right,
+  .products .product:hover .content .right {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 .products .product .content .left {
   margin-right: 15px;
@@ -11466,7 +11468,7 @@ nav.social-icons ul li a:hover {
     font-size: 14px;
     line-height: 14px;
   }
-  .portfolio ul li:hover figure .content,
+  /* .portfolio ul li:hover figure .content,
   .products .product:hover .content {
     opacity: 1;
     visibility: visible;
@@ -11486,7 +11488,7 @@ nav.social-icons ul li a:hover {
     -o-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
-  }
+  } */
 }
 @media (max-width: 780px) {
   .out-services-box .title-for-services {

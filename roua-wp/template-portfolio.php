@@ -85,7 +85,9 @@ get_header(); ?>
 
                                             <figcaption>
 
-                                                <img src="<?php echo $img_url; ?>" alt="<?php the_title(); ?>">
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <img src="<?php echo $img_url; ?>" alt="<?php the_title(); ?>">
+                                                </a>
 
                                             </figcaption>
 

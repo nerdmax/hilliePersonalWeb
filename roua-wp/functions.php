@@ -172,7 +172,7 @@ function clubix_load_custom_scripts() {
 /************************************************************/
 function clubix_load_custom_styles() {
 
-    wp_enqueue_style( 'master', THEMEROOT . '/assets/css/master.css');
+    wp_enqueue_style( 'master', THEMEROOT . '/assets/css/master.css', '1.2', true);
     //wp_enqueue_style( 'base-color', THEMEROOT . '/assets/css/color.css');
     wp_enqueue_style( 'style', get_stylesheet_uri());
     
