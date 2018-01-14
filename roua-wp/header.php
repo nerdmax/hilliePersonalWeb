@@ -460,17 +460,11 @@ if($header_color) {
 
 
 
-                <a href="#" class="open-menu">
+                <a href="#" class="open-menu navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
 
-						<span class="icon">
-
-							<span class="top"></span>
-
-							<span class="middle"></span>
-
-							<span class="bottom"></span>
-
-						</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
 
                     <!-- <?php _e('menu', LANGUAGE_ZONE); ?> -->
 
@@ -501,10 +495,19 @@ if($header_color) {
 
                 </nav>
 
-
-
             </div>
 
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="collapse navbar-collapse" id="menu-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/contact/">CONTACT</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
         </div>
 
     </header>

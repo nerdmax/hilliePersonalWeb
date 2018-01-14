@@ -152,18 +152,33 @@ jQuery(function(){
 
 
 
-        e.preventDefault();
+        // e.preventDefault();
 
 
 
-        jQuery('.open-menu').toggleClass('open');
+        // jQuery('.open-menu').toggleClass('open');
 
 
 
-        jQuery('html').toggleClass('menu-is-open');
+        // jQuery('html').toggleClass('menu-is-open');
 
 
 
+      });
+
+      // For New mobile collapsed header
+      $('#menu-collapse').on('show.bs.collapse', function () {
+        $("header.header").css({
+          "background-color": "rgba(0, 0, 0, 0.75)",
+          "height": "100vh"
+        })
+      });
+
+      $('#menu-collapse').on('hide.bs.collapse', function () {
+        $("header.header").css({
+          "background-color": "rgba(0, 0, 0, 0)",
+          "height": "auto"
+        })
       });
 
 
