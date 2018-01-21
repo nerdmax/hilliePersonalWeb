@@ -167,15 +167,15 @@ jQuery(function(){
       });
 
       // For New mobile collapsed header
-      $('#menu-collapse').on('show.bs.collapse', function () {
-        $("header.header").css({
+      jQuery('#menu-collapse').on('show.bs.collapse', function () {
+        jQuery("header.header").css({
           "background-color": "rgba(0, 0, 0, 0.75)",
           "height": "100vh"
         })
       });
 
-      $('#menu-collapse').on('hide.bs.collapse', function () {
-        $("header.header").css({
+      jQuery('#menu-collapse').on('hide.bs.collapse', function () {
+        jQuery("header.header").css({
           "background-color": "rgba(0, 0, 0, 0)",
           "height": "auto"
         })
