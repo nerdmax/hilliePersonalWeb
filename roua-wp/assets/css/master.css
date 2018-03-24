@@ -8975,7 +8975,7 @@ header.header.affix .logos:after {
 header.header.affix .logos .secondary-logo {
   height: inherit;
 }
-header.header.affix .logos .secondary-logo img {
+header.header.affix .logos .secondary-logo img, header.header.affix .logos .secondary-logo .logo-image {
   height: inherit;
   opacity: 1;
   visibility: visible;
@@ -8983,7 +8983,7 @@ header.header.affix .logos .secondary-logo img {
 header.header.affix .logos .primary-logo {
   height: 0;
 }
-header.header.affix .logos .primary-logo img {
+header.header.affix .logos .primary-logo img, header.header.affix .logos .primary-logo .logo-image {
   visibility: hidden;
   opacity: 0;
   height: 0;
@@ -9028,7 +9028,9 @@ header.header .logos .secondary-logo,
   height: 0;
 }
 header.header .logos .secondary-logo img,
-.roua-menu .logos .secondary-logo img {
+.roua-menu .logos .secondary-logo img,
+header.header .logos .secondary-logo .logo-image,
+.roua-menu .logos .secondary-logo .logo-image {
   visibility: hidden;
   opacity: 0;
   height: 0;
@@ -9039,7 +9041,9 @@ header.header .logos .secondary-logo img,
   transition: all 0.2s ease-in-out;
 }
 header.header .logos .primary-logo img,
-.roua-menu .logos .primary-logo img {
+.roua-menu .logos .primary-logo img,
+header.header .logos .primary-logo .logo-image,
+.roua-menu .logos .primary-logo .logo-image {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -9237,7 +9241,7 @@ header.header.dark-layout nav.social-icons ul li a:hover {
   header.header .logos .secondary-logo {
     height: inherit;
   }
-  header.header .logos .secondary-logo img {
+  header.header .logos .secondary-logo img, header.header .logos .secondary-logo .logo-image {
     height: inherit;
     opacity: 1;
     visibility: visible;
@@ -9245,7 +9249,7 @@ header.header.dark-layout nav.social-icons ul li a:hover {
   header.header .logos .primary-logo {
     height: 0;
   }
-  header.header .logos .primary-logo img {
+  header.header .logos .primary-logo img, header.header .logos .primary-logo .logo-image {
     visibility: hidden;
     opacity: 0;
     height: 0;
