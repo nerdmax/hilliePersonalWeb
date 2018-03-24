@@ -436,7 +436,8 @@ if($header_color) {
 
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 
-                            <img src="<?php echo $header_color_opt['logo_big']; ?>" alt="<?php bloginfo('name'); ?>">
+                            <div style="width:270px; height: 30px; background:url(<?php echo $header_color_opt['logo_big']; ?>) center/contain no-repeat;"></div>
+                            <!-- <img src="<?php echo $header_color_opt['logo_big']; ?>" alt="<?php bloginfo('name'); ?>"> -->
 
                         </a>
 
@@ -448,7 +449,8 @@ if($header_color) {
 
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 
-                            <img src="<?php echo $header_color_opt['logo_small']; ?>" alt="<?php bloginfo('name'); ?>">
+                            <div style="width:270px; height: 30px; background:url(<?php echo $header_color_opt['logo_small']; ?>) center/contain no-repeat;"></div>
+                            <!-- <img src="<?php echo $header_color_opt['logo_small']; ?>" alt="<?php bloginfo('name'); ?>"> -->
 
                         </a>
 
