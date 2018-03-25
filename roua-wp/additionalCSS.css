@@ -7,6 +7,11 @@
   }
   
   @media (max-width: 767px) {
+    header.header {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+    
     .desktop-nav-links {
       display: none;
     }
